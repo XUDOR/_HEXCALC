@@ -1,0 +1,2 @@
+# _HEXCALC
+REACT/CYPRESS project
