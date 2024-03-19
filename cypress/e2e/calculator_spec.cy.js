@@ -6,10 +6,10 @@ describe('Calculator Functionality', () => {
 
   it('performs addition correctly', () => {
     cy.visit('http://localhost:3000')
-    cy.get('.button-1').click() // Adapt selector to match your button for '1'
-    cy.get('.button-plus').click() // Adapt selector to match your button for '+'
-    cy.get('.button-2').click() // Adapt selector to match your button for '2'
-    cy.get('.button-equals').click() // Adapt selector to match your button for '='
+    cy.contains('button', '1').click() // Finds a button that contains '1' and clicks it
+    cy.contains('button', '+').click() // Finds a button that contains '+' and clicks it
+    cy.contains('button', '2').click() // Finds a button that contains '2' and clicks it
+    cy.contains('button', '=').click() // Finds a button that contains '=' and clicks it
     cy.get('.display').should('contain', '3') // Check if the display shows '3' as result
   })
 })
